@@ -56,12 +56,12 @@ const Product = () => {
               <img src={assets.star_icon} alt="" className="w-3 5" />
               <img src={assets.star_icon} alt="" className="w-3 5" />
               <img src={assets.star_dull_icon} alt="" className="w-3 5" />
-              <p className='pl-2'>(122)</p>
+              
           </div>
           <p className='mt-5 text-3xl font-medium'>{currency}{productData.price}</p>
           <p className='mt-5 text-gray-500 md:w-4/5'>{productData.description}</p>
           <div className='flex flex-col gap-4 my-8'>
-              <p>Select Size</p>
+              {/* <p>Select Size</p> */}
               <div className='flex gap-2'>
                 {productData.sizes.map((item,index)=>(
                   <button onClick={()=>setSize(item)} className={`border py-2 px-4 bg-gray-100 ${item === size ? 'border-orange-500' : ''}`} key={index}>{item}</button>
@@ -82,11 +82,11 @@ const Product = () => {
       <div className='mt-20'>
         <div className='flex'>
           <b className='border px-5 py-3 text-sm'>Description</b>
-          <p className='border px-5 py-3 text-sm'>Reviews (122)</p>
+          {/* <p className='border px-5 py-3 text-sm'>Reviews (122)</p> */}
         </div>
         <div className='flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500'>
-          <p>An e-commerce website is an online platform that facilitates the buying and selling of products or services over the internet. It serves as a virtual marketplace where businesses and individuals can showcase their products, interact with customers, and conduct transactions without the need for a physical presence. E-commerce websites have gained immense popularity due to their convenience, accessibility, and the global reach they offer.</p>
-          <p>E-commerce websites typically display products or services along with detailed descriptions, images, prices, and any available variations (e.g., sizes, colors). Each product usually has its own dedicated page with relevant information.</p>
+          <p>Discover a world of innovation right at your fingertips. Our online store is your go-to destination for all things electronic. We offer a curated collection of cutting-edge devices designed to simplify your life, enhance your creativity, and keep you connected. From powerful gadgets for work and play to smart solutions for your home, each item is presented with a detailed description and high-resolution images, so you know exactly what you're getting.</p>
+          <p>We’re more than just a store; we're your partner in technology. Our commitment to you extends beyond the sale. We offer a full suite of services to ensure you get the most out of your devices, including expert technical support, device setup assistance, and troubleshooting guides. Our dedicated team is always ready to help you with any questions or issues, making your tech journey smooth and hassle-free.</p>
         </div>
       </div>
 

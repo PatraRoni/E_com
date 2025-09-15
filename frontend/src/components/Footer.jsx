@@ -9,7 +9,7 @@ const Footer = () => {
         <div>
             <img src={assets.logo} className='mb-5 w-32' alt="" />
             <p className='w-full md:w-2/3 text-gray-600'>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+           Explore our innovative ACs, fridges, washing machines, and microwaves. We offer premium home appliance solutions designed for modern living. Browse our complete catalog for the perfect fit. If you'd like, I can help with writing the copyright notice or finding the right social media links for the footer as well.
             </p>
         </div>
 
@@ -26,8 +26,9 @@ const Footer = () => {
         <div>
             <p className='text-xl font-medium mb-5'>GET IN TOUCH</p>
             <ul className='flex flex-col gap-1 text-gray-600'>
-                <li>+1-212-456-7890</li>
-                <li>contact@foreveryou.com</li>
+                <li>+91-9831764962</li>
+                <li>+91-9883114813</li>
+                <li>globalinfocomworld@gmail.com</li>
             </ul>
         </div>
 
