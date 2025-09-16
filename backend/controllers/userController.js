@@ -26,6 +26,8 @@ const loginUser = async (req, res) => {
 
             const token = createToken(user._id)
             res.json({ success: true, token })
+            console.log(token);
+            
 
         }
         else {

@@ -20,8 +20,7 @@ const Service = () => {
         zipcode: '',
         country: '',
         phone: '',
-        // new selected product field
-        selectedProduct: ''
+        ProductName:'',
     })
 
     const onChangeHandler = (event) => {
@@ -52,7 +51,6 @@ const Service = () => {
             const selectedProductObj = products.find(p => p._id === formData.selectedProduct) || null
 
             let orderData = {
-                address: {
                     firstName: formData.firstName,
                     lastName: formData.lastName,
                     email: formData.email,
@@ -61,21 +59,15 @@ const Service = () => {
                     state: formData.state,
                     zipcode: formData.zipcode,
                     country: formData.country,
-                    phone: formData.phone
-                },
-                items: orderItems,
-                amount: getCartAmount() + delivery_fee,
-                // include selectedProduct info if needed by backend
-                selectedProduct: selectedProductObj ? {
-                    _id: selectedProductObj._id,
-                    name: selectedProductObj.name
-                } : null
+                    phone: formData.phone,
+                    ProductName: formData.ProductName
             }
 
             // Single place-order API (previously COD flow). Adjust endpoint if different.
-            const response = await axios.post(backendUrl + '/api/order/place', orderData, { headers: { token } })
+            const response = await axios.post(backendUrl + '/api/service/book', orderData, { headers: { token } })
             if (response.data.success) {
                 setCartItems({})
+                alert("sucessfull")
                 navigate('/orders')
             } else {
                 toast.error(response.data.message || 'Could not place order')
@@ -113,8 +105,10 @@ const Service = () => {
                 </div>
                 <input required onChange={onChangeHandler} name='phone' value={formData.phone} className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="number" placeholder='Phone' />
 
+                <input required onChange={onChangeHandler} name='ProductName' value={formData.ProductName} className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="text" placeholder='Product Name' />
+
                 {/* NEW: product dropdown placed right after phone */}
-                <select
+                {/* <select
                     required
                     name='selectedProduct'
                     value={formData.selectedProduct}
@@ -127,7 +121,7 @@ const Service = () => {
                             {product.name}
                         </option>
                     ))}
-                </select>
+                </select> */}
                 <div className='w-full text-end mt-8'>
                         <button type='submit' className='bg-black text-white px-16 py-3 text-sm'>PLACE ORDER</button>
                     </div>
