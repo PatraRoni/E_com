@@ -18,7 +18,7 @@ const Contact = () => {
           <p className=' text-gray-500'>Tel: 9883114813 <br /> Email: globalinfocomworld@gmail.com</p>
           <p className='font-semibold text-xl text-gray-600'>Our 2nd Store</p>
           <p className=' text-gray-500'>Gajarmore <br /> Jangipara Hooghly Pin-712410</p>
-          <p className=' text-gray-500'>Tel: 9883114813 <br /> Email: globalinfocomworld@gmail.com</p>
+          <p className=' text-gray-500'>Tel: 9831764962 <br /> Email: globalinfocomworld@gmail.com</p>
           <p className='font-semibold text-xl text-gray-600'>Contact us</p>
           <p className=' text-gray-500'>At 8.00 am to 9.00 am.</p>
         </div>
